@@ -1,0 +1,14 @@
+{
+  "text": {
+    "type": "plain_text",
+    "text": "Text",
+    "emoji": false
+  },
+  "value": "value",
+  "description": {
+    "type": "plain_text",
+    "text": "description",
+    "emoji": false
+  },
+  "url": "https:\/\/chemicalstrawberry.com"
+}

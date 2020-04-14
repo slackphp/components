@@ -1,0 +1,28 @@
+{
+  "blocks": [
+    {
+      "type": "divider"
+    }
+  ],
+  "callback_id": "id",
+  "clear_on_close": true,
+  "close": {
+    "emoji": false,
+    "text": "Close",
+    "type": "plain_text"
+  },
+  "external_id": "externalid",
+  "notify_on_close": true,
+  "private_metadata": "privatemeta",
+  "submit": {
+    "emoji": false,
+    "text": "Submit",
+    "type": "plain_text"
+  },
+  "title": {
+    "emoji": false,
+    "text": "Title",
+    "type": "plain_text"
+  },
+  "type": "modal"
+}

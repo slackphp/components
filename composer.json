@@ -1,0 +1,32 @@
+{
+  "name": "slackphp/sif-components",
+  "license": "MIT",
+  "description": "Provides a set of well-defined component objects that form blocks within Slack's Block Kit framework",
+  "keywords": [
+    "slack", "blocks", "block kit"
+  ],
+  "authors": [
+    {
+      "name": "James Scott",
+      "email": "james@chemicalstrawberry.com",
+      "homepage": "https://chemicalstrawberry.com"
+    }
+  ],
+  "require": {
+    "php" : ">=7.4",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "9.1.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "SIF\\Components\\" : "src/SIF/Components"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SIF\\Components\\Tests\\": "tests/"
+    }
+  }
+}

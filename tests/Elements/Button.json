@@ -1,0 +1,35 @@
+{
+  "action_id": "testid",
+  "confirm": {
+    "confirm": {
+      "emoji": false,
+      "text": "Confirm",
+      "type": "plain_text"
+    },
+    "deny": {
+      "emoji": false,
+      "text": "Deny",
+      "type": "plain_text"
+    },
+    "style": "primary",
+    "text": {
+      "text": "Text",
+      "type": "mrkdwn",
+      "verbatim": false
+    },
+    "title": {
+      "emoji": false,
+      "text": "Confirm title",
+      "type": "plain_text"
+    }
+  },
+  "style": "primary",
+  "text": {
+    "emoji": false,
+    "text": "Test button",
+    "type": "plain_text"
+  },
+  "type": "button",
+  "url": "https://google.com",
+  "value": "avalue"
+}

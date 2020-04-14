@@ -1,0 +1,23 @@
+{
+  "title": {
+    "type": "plain_text",
+    "text": "A title",
+    "emoji": false
+  },
+  "text": {
+    "type": "mrkdwn",
+    "text": "Some text",
+    "verbatim": false
+  },
+  "confirm": {
+    "type": "plain_text",
+    "text": "Confirm",
+    "emoji": false
+  },
+  "deny": {
+    "type": "plain_text",
+    "text": "Deny",
+    "emoji": false
+  },
+  "style": "primary"
+}

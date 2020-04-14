@@ -1,0 +1,37 @@
+{
+  "label": {
+    "type": "plain_text",
+    "text": "Label",
+    "emoji": false
+  },
+  "options": [
+    {
+      "text": {
+        "type": "plain_text",
+        "text": "Text1",
+        "emoji": false
+      },
+      "value": "value1",
+      "description": {
+        "type": "plain_text",
+        "text": "description",
+        "emoji": false
+      },
+      "url": "https:\/\/chemicalstrawberry.com"
+    },
+    {
+      "text": {
+        "type": "plain_text",
+        "text": "Text2",
+        "emoji": false
+      },
+      "value": "value2",
+      "description": {
+        "type": "plain_text",
+        "text": "description",
+        "emoji": false
+      },
+      "url": "https:\/\/chemicalstrawberry.com"
+    }
+  ]
+}

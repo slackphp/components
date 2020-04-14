@@ -1,0 +1,111 @@
+{
+  "action_id": "radioid",
+  "confirm": {
+    "confirm": {
+      "emoji": false,
+      "text": "Confirm",
+      "type": "plain_text"
+    },
+    "deny": {
+      "emoji": false,
+      "text": "Deny",
+      "type": "plain_text"
+    },
+    "style": "primary",
+    "text": {
+      "text": "Text",
+      "type": "mrkdwn",
+      "verbatim": false
+    },
+    "title": {
+      "emoji": false,
+      "text": "Confirm title",
+      "type": "plain_text"
+    }
+  },
+  "initial_options": [
+    {
+      "text": {
+        "emoji": false,
+        "text": "Test Radio 0",
+        "type": "plain_text"
+      },
+      "value": "testid-0"
+    },
+    {
+      "text": {
+        "emoji": false,
+        "text": "Test Radio 1",
+        "type": "plain_text"
+      },
+      "value": "testid-1"
+    },
+    {
+      "text": {
+        "emoji": false,
+        "text": "Test Radio 2",
+        "type": "plain_text"
+      },
+      "value": "testid-2"
+    },
+    {
+      "text": {
+        "emoji": false,
+        "text": "Test Radio 3",
+        "type": "plain_text"
+      },
+      "value": "testid-3"
+    },
+    {
+      "text": {
+        "emoji": false,
+        "text": "Test Radio 4",
+        "type": "plain_text"
+      },
+      "value": "testid-4"
+    }
+  ],
+  "options": [
+    {
+      "text": {
+        "emoji": false,
+        "text": "Test Radio 0",
+        "type": "plain_text"
+      },
+      "value": "testid-0"
+    },
+    {
+      "text": {
+        "emoji": false,
+        "text": "Test Radio 1",
+        "type": "plain_text"
+      },
+      "value": "testid-1"
+    },
+    {
+      "text": {
+        "emoji": false,
+        "text": "Test Radio 2",
+        "type": "plain_text"
+      },
+      "value": "testid-2"
+    },
+    {
+      "text": {
+        "emoji": false,
+        "text": "Test Radio 3",
+        "type": "plain_text"
+      },
+      "value": "testid-3"
+    },
+    {
+      "text": {
+        "emoji": false,
+        "text": "Test Radio 4",
+        "type": "plain_text"
+      },
+      "value": "testid-4"
+    }
+  ],
+  "type": "radio_buttons"
+}

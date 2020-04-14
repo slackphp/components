@@ -1,0 +1,69 @@
+{
+  "action_id": "overflowid",
+  "confirm": {
+    "confirm": {
+      "emoji": false,
+      "text": "Confirm",
+      "type": "plain_text"
+    },
+    "deny": {
+      "emoji": false,
+      "text": "Deny",
+      "type": "plain_text"
+    },
+    "style": "primary",
+    "text": {
+      "text": "Text",
+      "type": "mrkdwn",
+      "verbatim": false
+    },
+    "title": {
+      "emoji": false,
+      "text": "Confirm title",
+      "type": "plain_text"
+    }
+  },
+  "options": [
+    {
+      "text": {
+        "emoji": false,
+        "text": "Test Option 0",
+        "type": "plain_text"
+      },
+      "value": "testid-0"
+    },
+    {
+      "text": {
+        "emoji": false,
+        "text": "Test Option 1",
+        "type": "plain_text"
+      },
+      "value": "testid-1"
+    },
+    {
+      "text": {
+        "emoji": false,
+        "text": "Test Option 2",
+        "type": "plain_text"
+      },
+      "value": "testid-2"
+    },
+    {
+      "text": {
+        "emoji": false,
+        "text": "Test Option 3",
+        "type": "plain_text"
+      },
+      "value": "testid-3"
+    },
+    {
+      "text": {
+        "emoji": false,
+        "text": "Test Option 4",
+        "type": "plain_text"
+      },
+      "value": "testid-4"
+    }
+  ],
+  "type": "overflow"
+}

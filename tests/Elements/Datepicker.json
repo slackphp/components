@@ -1,0 +1,33 @@
+{
+  "action_id": "datepickerid",
+  "confirm": {
+    "confirm": {
+      "emoji": false,
+      "text": "Confirm",
+      "type": "plain_text"
+    },
+    "deny": {
+      "emoji": false,
+      "text": "Deny",
+      "type": "plain_text"
+    },
+    "style": "primary",
+    "text": {
+      "text": "Text",
+      "type": "mrkdwn",
+      "verbatim": false
+    },
+    "title": {
+      "emoji": false,
+      "text": "Confirm title",
+      "type": "plain_text"
+    }
+  },
+  "initial_date": "2020-04-14",
+  "placeholder": {
+    "emoji": false,
+    "text": "Placeholder",
+    "type": "plain_text"
+  },
+  "type": "datepicker"
+}

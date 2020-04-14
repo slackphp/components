@@ -1,0 +1,23 @@
+Should the "confirm" property be part of ActionElement? It's used in every element, but maybe in future some actions won't allow confirm?
+
+
+Should Text objects be validated and created via a factory (i.e. Helper::createText($string, $maxLength))
+
+
+Explain how to use SIF to create the external data source, and also consume it
+
+
+Process options and groups in a helper instead of doing it in every constructor (DRY)
+
+
+Selects and multiselects are in essence duplicates, merge them together somehow
+
+
+make sure that elements that use $id have their $id param in same placement order as other elements (consistency)
+
+
+
+
+write tests
+make sure docblocks are present
+documentation
