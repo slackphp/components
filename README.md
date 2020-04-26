@@ -13,9 +13,6 @@ composer require slackphp/sif-components
 ## Documentation
 All documentation for SIF and its libraries can be found on the [SIF Documentation Website](https://docs.chemicalstrawberry.com/sif/components).
 
-## Unsupported Features
-SIF does not support secondary attachments (https://api.slack.com/reference/messaging/attachments) as these are deprecated by Slack themselves.
-
 # What is SIF?
 SIF (Slack Integration Framework) is a collection of packages that make integration with the Slack API easy and fun!
 
