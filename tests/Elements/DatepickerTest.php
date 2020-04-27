@@ -16,7 +16,7 @@ class DatepickerTest extends TestCase {
     }
 
     public function testSerialization() {
-        $block = new Datepicker('datepickerid', 'Placeholder', new \DateTime('now'), $this->confirm);
+        $block = new Datepicker('datepickerid', 'Placeholder', new \DateTime('2020-04-14'), $this->confirm);
         $this->assertJsonStringEqualsJsonFile(__DIR__.'/Datepicker.json', json_encode($block));
     }
 
