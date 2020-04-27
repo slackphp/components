@@ -55,8 +55,8 @@ class Actions extends Block {
         parent::__construct($id);
 
         $count = count($elements);
-        if($count === 0 || $count > 100) {
-            throw new \RangeException('A minimum of 1 and a maximum of 10 elements must exist in an action block');
+        if($count === 0 || $count > 5) {
+            throw new \RangeException('A minimum of 1 and a maximum of 5 elements can exist in an action block');
         }
 
         // validate elements supported by this block
