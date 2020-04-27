@@ -26,7 +26,7 @@ class OptionGroupTest extends TestCase {
     }
 
     public function testLabelTooLarge() {
-        $this->expectException(ValueTooLargeException::class);
+        $this->expectException(\RangeException::class);
         new OptionGroup(bin2hex(random_bytes(100)), $this->options);
     }
 

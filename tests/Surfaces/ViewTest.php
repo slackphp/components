@@ -11,12 +11,12 @@ use SIF\Components\Surfaces\Modal;
 class ViewTest extends TestCase {
 
     public function testIdTooLong() {
-        $this->expectException(ValueTooLargeException::class);
+        $this->expectException(\RangeException::class);
         $surface = new Modal([], bin2hex(random_bytes(255)));
     }
 
     public function testPrivateMetadataTooLong() {
-        $this->expectException(ValueTooLargeException::class);
+        $this->expectException(\RangeException::class);
         $surface = new Modal([], 'id', 'Submit', 'Close', bin2hex(random_bytes(3000)));
     }
 

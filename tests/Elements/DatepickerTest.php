@@ -21,7 +21,7 @@ class DatepickerTest extends TestCase {
     }
 
     public function testTextTooLong() {
-        $this->expectException(ValueTooLargeException::class);
+        $this->expectException(\RangeException::class);
         new Datepicker('datepickerid', bin2hex(random_bytes(300)));
     }
 

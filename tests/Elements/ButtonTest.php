@@ -21,17 +21,17 @@ class ButtonTest extends TestCase {
     }
 
     public function testTextTooLarge() {
-        $this->expectException(ValueTooLargeException::class);
+        $this->expectException(\RangeException::class);
         new Button('testid', bin2hex(random_bytes(64)));
     }
 
     public function testUrlTooLarge() {
-        $this->expectException(ValueTooLargeException::class);
+        $this->expectException(\RangeException::class);
         new Button('testid', 'Test button', bin2hex(random_bytes(2000)));
     }
 
     public function testValueTooLarge() {
-        $this->expectException(ValueTooLargeException::class);
+        $this->expectException(\RangeException::class);
         new Button('testid', 'Test button', null, bin2hex(random_bytes(2000)));
     }
 

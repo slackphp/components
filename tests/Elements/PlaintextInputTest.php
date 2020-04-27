@@ -16,7 +16,7 @@ class PlaintextInputTest extends TestCase {
     }
 
     public function testPlaceholderTooLarge() {
-        $this->expectException(ValueTooLargeException::class);
+        $this->expectException(\RangeException::class);
         new PlaintextInput('id', bin2hex(random_bytes(300)));
     }
 

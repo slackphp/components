@@ -21,17 +21,17 @@ class ModalTest extends TestCase {
     }
 
     public function testTitleTooLong() {
-        $this->expectException(ValueTooLargeException::class);
+        $this->expectException(\RangeException::class);
         new Modal([], bin2hex(random_bytes(24)));
     }
 
     public function testSubmitTooLong() {
-        $this->expectException(ValueTooLargeException::class);
+        $this->expectException(\RangeException::class);
         new Modal([], 'title','id', bin2hex(random_bytes(24)));
     }
 
     public function testCloseTooLong() {
-        $this->expectException(ValueTooLargeException::class);
+        $this->expectException(\RangeException::class);
         new Modal([], 'title','id', 'Submit', bin2hex(random_bytes(24)));
     }
 

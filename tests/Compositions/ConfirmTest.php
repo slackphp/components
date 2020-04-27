@@ -16,22 +16,22 @@ class ConfirmTest extends TestCase {
     }
 
     public function testTitleTooLarge() {
-        $this->expectException(ValueTooLargeException::class);
+        $this->expectException(\RangeException::class);
         new Confirm(bin2hex(random_bytes(100)), 'Text');
     }
 
     public function testTextTooLarge() {
-        $this->expectException(ValueTooLargeException::class);
+        $this->expectException(\RangeException::class);
         new Confirm('Title', bin2hex(random_bytes(300)));
     }
 
     public function testConfirmButtonTooLarge() {
-        $this->expectException(ValueTooLargeException::class);
+        $this->expectException(\RangeException::class);
         new Confirm('Title', 'Text', bin2hex(random_bytes(300)));
     }
 
     public function testDenyButtonTooLarge() {
-        $this->expectException(ValueTooLargeException::class);
+        $this->expectException(\RangeException::class);
         new Confirm('Title', 'Text', 'Confirm', bin2hex(random_bytes(300)));
     }
 

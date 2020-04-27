@@ -15,17 +15,17 @@ class OptionTest extends TestCase {
     }
 
     public function testTextTooLarge() {
-        $this->expectException(ValueTooLargeException::class);
+        $this->expectException(\RangeException::class);
         new Option(bin2hex(random_bytes(100)), 'value');
     }
 
     public function testValueTooLarge() {
-        $this->expectException(ValueTooLargeException::class);
+        $this->expectException(\RangeException::class);
         new Option('text', bin2hex(random_bytes(100)));
     }
 
     public function testDescriptionTooLarge() {
-        $this->expectException(ValueTooLargeException::class);
+        $this->expectException(\RangeException::class);
         new Option('text', 'value', false, bin2hex(random_bytes(100)));
     }
 
