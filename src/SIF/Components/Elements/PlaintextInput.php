@@ -39,15 +39,15 @@ class PlaintextInput extends ActionElement {
     public function __construct(string $id, $placeholder = null, ?string $initialValue = null, bool $multiline = false, ?int $minLength = null, ?int $maxLength = null) {
         parent::__construct($id);
 
-        if(!empty($placeholder) && is_string($placeholder)) {
+        if(is_string($placeholder)) {
             $placeholder = new Text($placeholder, Text::PLAINTEXT);
-        }
-        if(strlen($placeholder->text) > 150) {
-            throw new \RangeException('The maximum length of the placeholder is 150 characters');
+            if(strlen($placeholder->text) > 150) {
+                throw new \RangeException('The maximum length of the placeholder is 150 characters');
+            }
         }
 
         if($minLength !== null && $minLength > 3000) {
-            throw new OutOfRangeException('The maximum minlength on a text field is 3000 characters');
+            throw new \RangeException('The maximum minlength on a text field is 3000 characters');
         }
 
         $this->placeholder = $placeholder;
