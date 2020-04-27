@@ -36,7 +36,7 @@ class Context extends Block {
         parent::__construct($id);
 
         $count = count($elements);
-        if($count === 0 || $count > 100) {
+        if($count === 0 || $count > 10) {
             throw new \RangeException('A minimum of 1 and a maximum of 10 elements must exist in an context block');
         }
 
