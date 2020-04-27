@@ -48,15 +48,15 @@ class Actions extends Block {
     /**
      * @param array $elements
      * @param string|null $id
-     * @throws OutOfRangeException
-     * @throws \SIF\Components\Exceptions\ValueTooLargeException
+     * @throws \RangeException
+     * @throws \SIF\Components\Exceptions\RangeException
      */
     public function __construct(array $elements, ?string $id = null) {
         parent::__construct($id);
 
         $count = count($elements);
         if($count === 0 || $count > 100) {
-            throw new OutOfRangeException('A minimum of 1 and a maximum of 10 elements must exist in an action block');
+            throw new \RangeException('A minimum of 1 and a maximum of 10 elements must exist in an action block');
         }
 
         // validate elements supported by this block

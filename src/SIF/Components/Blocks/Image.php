@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace SIF\Components\Blocks;
 
 use SIF\Components\Compositions\Text;
-use SIF\Components\Exceptions\ValueTooLargeException;
+use SIF\Components\Exceptions\RangeException;
 
 /**
  * An image
@@ -35,7 +35,6 @@ class Image extends Block {
      * @param string $alt
      * @param Text|string|null $title
      * @param string|null $id
-     * @throws ValueTooLargeException
      */
     public function __construct(string $url, string $alt, $title = null, ?string $id = null) {
         parent::__construct($id);
@@ -46,7 +45,7 @@ class Image extends Block {
             }
             $title->type = Text::PLAINTEXT; // force downgrade
             if(strlen($title->text) > 2000) {
-                throw new ValueTooLargeException('The maximum length of an image title is 2000 characters');
+                throw new \RangeException('The maximum length of an image title is 2000 characters');
             }
         }
 

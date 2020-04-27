@@ -33,7 +33,7 @@ class SelectExternal extends Select {
      * @param int $minQueryLength
      * @param Option|null $initialOption
      * @param Confirm|null $confirm
-     * @throws \SIF\Components\Exceptions\ValueTooLargeException
+     * @throws \SIF\Components\Exceptions\RangeException
      */
     public function __construct(string $id, $placeholder, int $minQueryLength = 3, ?Option $initialOption = null, ?Confirm $confirm = null) {
         parent::__construct($id, $placeholder, $confirm);

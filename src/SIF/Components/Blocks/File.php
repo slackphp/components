@@ -27,7 +27,7 @@ class File extends Block {
      * @param string $externalId
      * @param string $source
      * @param string|null $id
-     * @throws \SIF\Components\Exceptions\ValueTooLargeException
+     * @throws \SIF\Components\Exceptions\RangeException
      */
     public function __construct(string $externalId, string $source = self::SOURCE_REMOTE, ?string $id = null) {
         parent::__construct($id);

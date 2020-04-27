@@ -5,7 +5,7 @@ namespace SIF\Components\Elements;
 
 use SIF\Components\Compositions\Confirm;
 use SIF\Components\Compositions\Text;
-use SIF\Components\Exceptions\ValueTooLargeException;
+use SIF\Components\Exceptions\RangeException;
 
 /**
  * A Button
@@ -51,7 +51,7 @@ class Button extends ActionElement {
      * @param string|null $value
      * @param string|null $style
      * @param Confirm|null $confirm
-     * @throws ValueTooLargeException
+     * @throws \RangeException
      */
     public function __construct(string $id, $text, ?string $url = null, ?string $value = null, ?string $style = null, ?Confirm $confirm = null) {
         parent::__construct($id);
@@ -60,15 +60,15 @@ class Button extends ActionElement {
             $text = new Text($text, Text::PLAINTEXT);
         }
         if(strlen($text->text) > 75) {
-            throw new ValueTooLargeException('The maximum length of a button text value is 75 characters');
+            throw new \RangeException('The maximum length of a button text value is 75 characters');
         }
 
         if(!empty($url) && strlen($url) > 3000) {
-            throw new ValueTooLargeException('The maximum length of a button url value is 3000 characters');
+            throw new \RangeException('The maximum length of a button url value is 3000 characters');
         }
 
         if(!empty($value) && strlen($value) > 2000) {
-            throw new ValueTooLargeException('The maximum length of a button value is 2000 characters');
+            throw new \RangeException('The maximum length of a button value is 2000 characters');
         }
 
         $this->text = $text;

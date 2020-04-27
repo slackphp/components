@@ -30,7 +30,7 @@ class SelectChannel extends Select {
      * @param string|null $initialChannel
      * @param Confirm|null $confirm
      * @param bool $responseUrlEnabled
-     * @throws \SIF\Components\Exceptions\ValueTooLargeException
+     * @throws \SIF\Components\Exceptions\RangeException
      */
     public function __construct(string $id, $placeholder, ?string $initialChannel = null, ?Confirm $confirm = null, bool $responseUrlEnabled = false) {
         parent::__construct($id, $placeholder, $confirm);

@@ -16,6 +16,7 @@ Selects and multiselects are in essence duplicates, merge them together somehow
 make sure that elements that use $id have their $id param in same placement order as other elements (consistency)
 
 
+use built-in exceptions for some types of exceptions
 
 
 write tests

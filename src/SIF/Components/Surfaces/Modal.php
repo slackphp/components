@@ -10,7 +10,7 @@ use SIF\Components\Blocks\Image;
 use SIF\Components\Blocks\Input;
 use SIF\Components\Blocks\Section;
 use SIF\Components\Compositions\Text;
-use SIF\Components\Exceptions\ValueTooLargeException;
+use SIF\Components\Exceptions\RangeException;
 
 /**
  * A modal view
@@ -62,7 +62,7 @@ class Modal extends View {
      * @param bool $clearOnClose
      * @param bool $notifyOnClose
      * @param string|null $externalId
-     * @throws ValueTooLargeException
+     * @throws \RangeException
      */
     public function __construct(array $blocks, $title, ?string $id = null, $submit = null, $close = null, ?string $privateMetadata = null, bool $clearOnClose = false, bool $notifyOnClose = false, ?string $externalId = null) {
         parent::__construct($blocks, $id, $privateMetadata, $externalId);
@@ -72,7 +72,7 @@ class Modal extends View {
         }
         $title->type = Text::PLAINTEXT; // force downgrade
         if(strlen($title->text) > 24) {
-            throw new ValueTooLargeException('The maximum length of the title is 24 characters');
+            throw new \RangeException('The maximum length of the title is 24 characters');
         }
 
         if(!empty($submit)) {
@@ -81,7 +81,7 @@ class Modal extends View {
             }
             $submit->type = Text::PLAINTEXT; // force downgrade
             if(strlen($submit->text) > 24) {
-                throw new ValueTooLargeException('The maximum length of a button text value is 24 characters');
+                throw new \RangeException('The maximum length of a button text value is 24 characters');
             }
         }
 
@@ -91,7 +91,7 @@ class Modal extends View {
             }
             $close->type = Text::PLAINTEXT; // force downgrade
             if(strlen($close->text) > 24) {
-                throw new ValueTooLargeException('The maximum length of a button text value is 24 characters');
+                throw new \RangeException('The maximum length of a button text value is 24 characters');
             }
         }
 

@@ -34,7 +34,7 @@ class SelectStatic extends Select {
      * @param array|null $optionGroups
      * @param Confirm|null $confirm
      * @throws OutOfRangeException
-     * @throws \SIF\Components\Exceptions\ValueTooLargeException
+     * @throws \SIF\Components\Exceptions\RangeException
      */
     public function __construct(string $id, array $options, $placeholder, ?array $optionGroups = null, ?Confirm $confirm = null) {
         parent::__construct($id, $placeholder, $confirm);

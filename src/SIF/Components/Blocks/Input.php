@@ -19,7 +19,7 @@ use SIF\Components\Elements\SelectExternal;
 use SIF\Components\Elements\SelectStatic;
 use SIF\Components\Elements\SelectUser;
 use SIF\Components\Exceptions\ElementNotSupportedInBlockException;
-use SIF\Components\Exceptions\ValueTooLargeException;
+use SIF\Components\Exceptions\RangeException;
 
 /**
  * An input
@@ -71,7 +71,7 @@ class Input extends Block {
      * @param string|null $id
      * @param null $hint
      * @param bool $optional
-     * @throws ValueTooLargeException
+     * @throws \RangeException
      */
     public function __construct($label, $element, $hint = null, bool $optional = false, ?string $id = null) {
         parent::__construct($id);
@@ -80,7 +80,7 @@ class Input extends Block {
             $label = new Text($label, Text::PLAINTEXT);
         }
         if(strlen($label->text) > 2000) {
-            throw new ValueTooLargeException('The maximum length of a inputs label value is 2000 characters');
+            throw new \RangeException('The maximum length of an input label value is 2000 characters');
         }
 
         // todo: check element is valid for this block
@@ -90,7 +90,7 @@ class Input extends Block {
                 $hint = new Text($hint, Text::PLAINTEXT);
             }
             if(strlen($hint->text) > 2000) {
-                throw new ValueTooLargeException('The maximum length of a inputs hint value is 2000 characters');
+                throw new \RangeException('The maximum length of an input hint value is 2000 characters');
             }
         }
 

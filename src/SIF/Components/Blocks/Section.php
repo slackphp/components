@@ -24,7 +24,7 @@ use SIF\Components\Elements\SelectStatic;
 use SIF\Components\Elements\SelectUser;
 use SIF\Components\Exceptions\ElementNotSupportedInBlockException;
 use SIF\Components\Exceptions\OutOfRangeException;
-use SIF\Components\Exceptions\ValueTooLargeException;
+use SIF\Components\Exceptions\RangeException;
 
 /**
  * A section block
@@ -72,7 +72,7 @@ class Section extends Block {
      * @param array|null $fields
      * @param Element|null $element
      * @param string|null $id
-     * @throws OutOfRangeException|ValueTooLargeException
+     * @throws OutOfRangeException|\RangeException
      */
     public function __construct($text, ?array $fields = [], ?Element $element = null, ?string $id = null) {
         parent::__construct($id);
@@ -81,12 +81,12 @@ class Section extends Block {
             $text = new Text($text); // convert to text composition
         }
         if(strlen($text->text) > 3000) {
-            throw new ValueTooLargeException('The maximum length of a section text value is 3000 characters');
+            throw new \RangeException('The maximum length of a section text value is 3000 characters');
         }
         if(is_array($fields)) {
             // validate that fields are acceptable
             if(count($fields) > 10) {
-                throw new OutOfRangeException('A maximum of 20 fields can be attached to a section');
+                throw new \RangeException('A maximum of 20 fields can be attached to a section');
             }
         }
 

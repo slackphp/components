@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace SIF\Components\Surfaces;
 
-use SIF\Components\Exceptions\ValueTooLargeException;
+use SIF\Components\Exceptions\RangeException;
 
 /**
  * A view
@@ -32,13 +32,13 @@ abstract class View extends Surface {
 
         if(!empty($id)) {
             if(strlen($id) > 3000) {
-                throw new ValueTooLargeException('The maximum length of a callback id is 255 characters');
+                throw new \RangeException('The maximum length of a callback id is 255 characters');
             }
         }
 
         if(!empty($privateMetadata)) {
             if(strlen($privateMetadata) > 3000) {
-                throw new ValueTooLargeException('The maximum length of private metadata is 3000 characters');
+                throw new \RangeException('The maximum length of private metadata is 3000 characters');
             }
         }
 

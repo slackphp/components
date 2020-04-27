@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace SIF\Components\Compositions;
 
-use SIF\Components\Exceptions\ValueTooLargeException;
+use SIF\Components\Exceptions\RangeException;
 
 class Option extends Composition {
 
@@ -26,18 +26,18 @@ class Option extends Composition {
      * @param bool $selected
      * @param Text|string|null $description
      * @param string|null $url
-     * @throws ValueTooLargeException
+     * @throws \RangeException
      */
     public function __construct($text, string $value, bool $selected = false, $description = null, ?string $url = null) {
         if(is_string($text)) {
             $text = new Text($text, Text::PLAINTEXT); // as some option groups do not support mrkdwn, default to plain_text
         }
         if(strlen($text->text) > 75) {
-            throw new ValueTooLargeException('The maximum length of an option text value is 75 characters');
+            throw new \RangeException('The maximum length of an option text value is 75 characters');
         }
 
         if(strlen($value) > 75) {
-            throw new ValueTooLargeException('The maximum length of an options value is 75 characters');
+            throw new \RangeException('The maximum length of an options value is 75 characters');
         }
 
         if(!empty($description)) {
@@ -45,7 +45,7 @@ class Option extends Composition {
                 $description = new Text($description, Text::PLAINTEXT);
             }
             if(strlen($description->text) > 75) {
-                throw new ValueTooLargeException('The maximum length of an option description is 75 characters');
+                throw new \RangeException('The maximum length of an option description is 75 characters');
             }
         }
 

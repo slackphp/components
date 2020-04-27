@@ -5,7 +5,7 @@ namespace SIF\Components\Elements;
 
 use SIF\Components\Compositions\Confirm;
 use SIF\Components\Compositions\Text;
-use SIF\Components\Exceptions\ValueTooLargeException;
+use SIF\Components\Exceptions\RangeException;
 
 /**
  * A datepicker
@@ -36,7 +36,7 @@ class Datepicker extends ActionElement {
      * @param string|Text|null $placeholder
      * @param \DateTimeInterface $initialDate
      * @param Confirm|null $confirm
-     * @throws ValueTooLargeException
+     * @throws \RangeException
      */
     public function __construct(string $id, $placeholder = null, ?\DateTimeInterface $initialDate = null, ?Confirm $confirm = null) {
         parent::__construct($id);
@@ -46,7 +46,7 @@ class Datepicker extends ActionElement {
                 $placeholder = new Text($placeholder, Text::PLAINTEXT);
             }
             if(strlen($placeholder->text) > 150) {
-                throw new ValueTooLargeException('The maximum length of a datepicker placeholder value is 150 characters');
+                throw new \RangeException('The maximum length of a datepicker placeholder value is 150 characters');
             }
         }
 

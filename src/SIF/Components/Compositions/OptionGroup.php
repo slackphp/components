@@ -5,7 +5,7 @@ namespace SIF\Components\Compositions;
 
 use SIF\Components\Exceptions\InvalidCompositionException;
 use SIF\Components\Exceptions\OutOfRangeException;
-use SIF\Components\Exceptions\ValueTooLargeException;
+use SIF\Components\Exceptions\RangeException;
 
 /**
  * A group of options
@@ -29,7 +29,7 @@ class OptionGroup extends Composition {
             $label = new Text($label, Text::PLAINTEXT);
         }
         if(strlen($label->text) > 75) {
-            throw new ValueTooLargeException('The maximum length of an option group label is 75 characters');
+            throw new \RangeException('The maximum length of an option group label is 75 characters');
         }
 
         $count = count($options);

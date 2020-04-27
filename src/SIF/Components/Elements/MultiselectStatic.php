@@ -35,7 +35,7 @@ class MultiselectStatic extends Multiselect {
      * @param Confirm|null $confirm
      * @param int|null $maxSelections
      * @throws OutOfRangeException
-     * @throws \SIF\Components\Exceptions\ValueTooLargeException
+     * @throws \SIF\Components\Exceptions\RangeException
      */
     public function __construct(string $id, array $options, $placeholder, ?array $optionGroups = null, ?Confirm $confirm = null, ?int $maxSelections = null) {
         parent::__construct($id, $placeholder, $confirm, $maxSelections);

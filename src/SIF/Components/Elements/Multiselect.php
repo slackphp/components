@@ -5,7 +5,7 @@ namespace SIF\Components\Elements;
 
 use SIF\Components\Compositions\Confirm;
 use SIF\Components\Compositions\Text;
-use SIF\Components\Exceptions\ValueTooLargeException;
+use SIF\Components\Exceptions\RangeException;
 
 /**
  * Multiselect elements extend off this
@@ -27,7 +27,7 @@ abstract class Multiselect extends ActionElement {
             $placeholder = new Text($placeholder, Text::PLAINTEXT);
         }
         if(strlen($placeholder->text) > 150) {
-            throw new ValueTooLargeException('The maximum length of the placeholder is 150 characters');
+            throw new \RangeException('The maximum length of the placeholder is 150 characters');
         }
 
         $this->placeholder = $placeholder;

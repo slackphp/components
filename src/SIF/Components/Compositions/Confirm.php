@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace SIF\Components\Compositions;
 
-use SIF\Components\Exceptions\ValueTooLargeException;
+use SIF\Components\Exceptions\RangeException;
 
 /**
  * A confirmation dialog
@@ -45,28 +45,28 @@ class Confirm extends Composition {
             $title = new Text($title, Text::PLAINTEXT);
         }
         if(strlen($title->text) > 100) {
-            throw new ValueTooLargeException('The maximum length of a confirm title value is 100 characters');
+            throw new \RangeException('The maximum length of a confirm title value is 100 characters');
         }
 
         if(is_string($text)) {
             $text = new Text($text);
         }
         if(strlen($text->text) > 300) {
-            throw new ValueTooLargeException('The maximum length of a confirm text value is 100 characters');
+            throw new \RangeException('The maximum length of a confirm text value is 100 characters');
         }
 
         if(is_string($confirm)) {
             $confirm = new Text($confirm, Text::PLAINTEXT);
         }
         if(strlen($confirm->text) > 300) {
-            throw new ValueTooLargeException('The maximum length of a confirm dialog confirm button value is 30 characters');
+            throw new \RangeException('The maximum length of a confirm dialog confirm button value is 30 characters');
         }
 
         if(is_string($deny)) {
             $deny = new Text($deny, Text::PLAINTEXT);
         }
         if(strlen($deny->text) > 300) {
-            throw new ValueTooLargeException('The maximum length of a confirm dialog deny button value is 30 characters');
+            throw new \RangeException('The maximum length of a confirm dialog deny button value is 30 characters');
         }
 
         $this->title = $title;

@@ -37,7 +37,7 @@ class SelectConversation extends Select {
      * @param ConversationFilter|null $filter
      * @param Confirm|null $confirm
      * @param bool $responseUrlEnabled
-     * @throws \SIF\Components\Exceptions\ValueTooLargeException
+     * @throws \SIF\Components\Exceptions\RangeException
      */
     public function __construct(string $id, $placeholder,  ?string $initialConversation = null, ?ConversationFilter $filter = null, ?Confirm $confirm = null, bool $responseUrlEnabled = false) {
         parent::__construct($id, $placeholder, $confirm);

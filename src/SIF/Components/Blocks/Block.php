@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace SIF\Components\Blocks;
 
-use SIF\Components\Exceptions\ValueTooLargeException;
+use SIF\Components\Exceptions\RangeException;
 
 /**
  * The core 'block', containing shared properties
@@ -29,7 +29,7 @@ abstract class Block implements \JsonSerializable {
     public function __construct(?string $id = null) {
         if(!empty($id)) {
             if(strlen($id) > 255) {
-                throw new ValueTooLargeException('A blocks ID cannot be larger than 255 characters');
+                throw new \RangeException('A blocks ID cannot be larger than 255 characters');
             }
         }
 

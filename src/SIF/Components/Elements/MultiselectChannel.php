@@ -28,7 +28,7 @@ class MultiselectChannel extends Multiselect {
      * @param array|null $initialChannels
      * @param Confirm|null $confirm
      * @param int|null $maxSelections
-     * @throws \SIF\Components\Exceptions\ValueTooLargeException
+     * @throws \SIF\Components\Exceptions\RangeException
      */
     public function __construct(string $id, $placeholder, ?array $initialChannels = null, ?Confirm $confirm = null, ?int $maxSelections = null) {
         parent::__construct($id, $placeholder, $confirm, $maxSelections);

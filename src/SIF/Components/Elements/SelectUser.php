@@ -27,7 +27,7 @@ class SelectUser extends Select {
      * @param $placeholder
      * @param string|null $initialUser
      * @param Confirm|null $confirm
-     * @throws \SIF\Components\Exceptions\ValueTooLargeException
+     * @throws \SIF\Components\Exceptions\RangeException
      */
     public function __construct(string $id, $placeholder, ?string $initialUser = null, ?Confirm $confirm = null) {
         parent::__construct($id, $placeholder, $confirm);
