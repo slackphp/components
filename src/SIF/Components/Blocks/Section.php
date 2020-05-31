@@ -86,8 +86,15 @@ class Section extends Block {
         if(is_array($fields)) {
             // validate that fields are acceptable
             if(count($fields) > 10) {
-                throw new \RangeException('A maximum of 20 fields can be attached to a section');
+                throw new \RangeException('A maximum of 10 fields can be attached to a section');
             }
+
+            foreach($fields as &$field) {
+                if(is_string($field)) {
+                    $field = new Text($field, Text::PLAINTEXT);
+                }
+            }
+            unset($field);
         }
 
         // validate element supported by this block

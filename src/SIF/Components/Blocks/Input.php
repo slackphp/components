@@ -28,6 +28,8 @@ use SIF\Components\Exceptions\RangeException;
  */
 class Input extends Block {
 
+    protected string $type = 'input';
+
     /**
      * @var Text The label of the input field
      */
@@ -83,8 +85,6 @@ class Input extends Block {
             throw new \RangeException('The maximum length of an input label value is 2000 characters');
         }
 
-        // todo: check element is valid for this block
-
         if(!empty($hint)) {
             if(is_string($hint)) {
                 $hint = new Text($hint, Text::PLAINTEXT);
@@ -116,7 +116,7 @@ class Input extends Block {
             $block['hint'] = $this->hint;
         }
 
-        return $block + parent::jsonSerialize();
+        return parent::jsonSerialize() + $block;
     }
 
 }

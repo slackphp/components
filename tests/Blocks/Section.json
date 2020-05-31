@@ -1,0 +1,25 @@
+{
+  "type": "section",
+  "block_id": "testid",
+  "text": {
+    "type": "mrkdwn",
+    "text": "test",
+    "verbatim": false
+  },
+  "fields": [
+    {
+      "type": "plain_text",
+      "text": "test",
+      "emoji": false
+    }
+  ],
+  "accessory": {
+    "type": "button",
+    "action_id": "test",
+    "text": {
+      "type": "plain_text",
+      "text": "test",
+      "emoji": false
+    }
+  }
+}

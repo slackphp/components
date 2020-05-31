@@ -21,7 +21,7 @@ class PlaintextInputTest extends TestCase {
     }
 
     public function testMinimumLengthTooLarge() {
-        $this->expectException(OutOfRangeException::class);
+        $this->expectException(\RangeException::class);
         new PlaintextInput('id', 'placeholder', 'a', true, 10000);
     }
 

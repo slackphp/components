@@ -1,0 +1,11 @@
+{
+  "elements": [
+    {
+      "type": "mrkdwn",
+      "text": "some text",
+      "verbatim": false
+    }
+  ],
+  "type": "context",
+  "block_id": "id"
+}

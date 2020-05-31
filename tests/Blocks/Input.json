@@ -1,0 +1,20 @@
+{
+  "type": "input",
+  "block_id": "testid",
+  "label": {
+    "type": "plain_text",
+    "text": "Test",
+    "emoji": false
+  },
+  "element": {
+    "type": "plain_text_input",
+    "action_id": "test",
+    "multiline": false
+  },
+  "optional": true,
+  "hint": {
+    "type": "plain_text",
+    "text": "testhint",
+    "emoji": false
+  }
+}

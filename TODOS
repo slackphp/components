@@ -19,6 +19,9 @@ make sure that elements that use $id have their $id param in same placement orde
 use built-in exceptions for some types of exceptions
 
 
+set properties (like ids) via setters (so constructors also do $this->setId('abc') )
+
+
 write tests
 make sure docblocks are present
 documentation
