@@ -1,3 +1,6 @@
+# NOTE: This package is in initial development - documentation and support is not available until the first tagged release.
+We strongly recommend not using this library in production until the first tagged release. Parameters and functionality **can and will** change until then!
+
 # Slack Block Kit Components
 This shared resource contains all of Slack's Block Kit components (such as elements and compositions) as easy to implement and manipulate objects.
 
