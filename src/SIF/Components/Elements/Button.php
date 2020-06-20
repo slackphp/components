@@ -47,13 +47,13 @@ class Button extends ActionElement {
     /**
      * @param string|Text $text
      * @param string $id
-     * @param string|null $url
      * @param string|null $value
+     * @param string|null $url
      * @param string|null $style
      * @param Confirm|null $confirm
      * @throws \RangeException
      */
-    public function __construct(string $id, $text, ?string $url = null, ?string $value = null, ?string $style = null, ?Confirm $confirm = null) {
+    public function __construct(string $id, $text, ?string $value = null, ?string $url = null, ?string $style = null, ?Confirm $confirm = null) {
         parent::__construct($id);
 
         if(is_string($text)) {
