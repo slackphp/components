@@ -1,5 +1,5 @@
 {
-  "name": "slackphp/sif-components",
+  "name": "slackphp/components",
   "license": "MIT",
   "description": "Provides a set of well-defined component objects that form blocks within Slack's Block Kit framework",
   "keywords": [

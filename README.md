@@ -5,7 +5,7 @@ This shared resource contains all of Slack's Block Kit components (such as eleme
 Require this package into your composer.json
 
 ```shell script
-composer require slackphp/sif-components
+composer require slackphp/components
 ```
 
 ## Documentation
