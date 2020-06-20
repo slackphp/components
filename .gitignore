@@ -2,3 +2,5 @@
 tmp/
 vendor/
 composer.lock
+.phpdoc
+phpDocumentor.phar

@@ -1,5 +1,3 @@
-# NOTE: UNDER DEVELOPMENT, DO NOT USE IN PRODUCTION
-
 # Slack Block Kit Components
 This shared resource contains all of Slack's Block Kit components (such as elements and compositions) as easy to implement and manipulate objects.
 
@@ -15,4 +13,3 @@ All documentation for SIF and its libraries can be found on the [SIF Documentati
 
 # What is SIF?
 SIF (Slack Integration Framework) is a collection of packages that make integration with the Slack API easy and fun!
-
