@@ -77,11 +77,13 @@ class Section extends Block {
     public function __construct($text, ?array $fields = [], ?Element $element = null, ?string $id = null) {
         parent::__construct($id);
 
-        if(!empty($text) && is_string($text)) {
-            $text = new Text($text); // convert to text composition
-        }
-        if(strlen($text->text) > 3000) {
-            throw new \RangeException('The maximum length of a section text value is 3000 characters');
+        if(!empty($text)) {
+            if(is_string($text)) {
+                $text = new Text($text); // convert to text composition
+            }
+            if(strlen($text->text) > 3000) {
+                throw new \RangeException('The maximum length of a section text value is 3000 characters');
+            }
         }
         if(is_array($fields)) {
             // validate that fields are acceptable
